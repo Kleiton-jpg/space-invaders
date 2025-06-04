@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Press Start 2P", sans-serif;
+}
+
+html, body {
+   
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+canvas {
+    background-color: #121212;
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 0;
+}
+
+.screen h1 {
+    font-size: 2em;
+}
+
+.screen span {
+    font-size: 0.6em;
+    color: gray;
+    margin-top: auto;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.start-screen > div {
+    margin-top: auto;
+}
+
+.button-play, .restart-button {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    background-color: #ddd;
+    display: block;
+    height: 40px;
+    margin: 20px auto 0;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.restart-button {
+    width: 200px;
+}
+
+.button-play:hover, .restart-button:hover {
+    background-color: #fff;
+}
+
+.game-over {
+    scale: 0;
+    animation: zoom 0.8s ease-in-out forwards;
+}
+
+.score-ui {
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 1rem;
+    display: none;
+}
+
+.score-ui > div {
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@keyframes zoom {
+    from {
+        scale: 0;
+    }
+
+    to {
+        scale: 1;
+    }
+}
